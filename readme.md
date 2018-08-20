@@ -34,6 +34,29 @@ NFC支持以下3种工作模式：读卡器模式（Reader/writer mode）、仿�
  
  **NDEF格式其实就类似于硬盘的NTFS**，我们看一下NDEF数据：<br>
  
+ #### 2.1 NDEF数据的操作
+ Android SDK Api支持如下3种NDEF数据的操作：
+ 1) 从NFC标签读取NDEF格式的数据。
+ 2) 向NFC标签写入NDEF格式的数据。
+ 3) 通过Android Beam技术将NDEF数据发送到另一部NFC设备。
+ 
+ 用于描述NDEF格式数据的两个类：<br>
+ 1) NdefMessage : 描述NDEF格式的信息，实际上我们写入NFC标签的就是NdefMessage对象。
+ 2) NdefRecord : 描述NDEF信息的一个信息段，一个NdefMessage可能包含一个或者多个NdefRecord。
+ 
+ NdefMessage和NdefRecord是Android NFC技术的核心类，无论读写NDEF格式的NFC标签，还是通过Android Beam技术传递Ndef格式的数据，都需要这两个类。<br>
+ 
+ #### 2.2 非NDEF数据的操作
+ 对于某些特殊需求，可能要存任意的数据，对于这些数据，我们就需要自定义格式。这些数据格式实际上就是普通的字节流，至于字节流中的数据代表什么，就由开发人员自己定义了。
+ 
+ #### 2.3 编写NFC程序的基本步骤
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
